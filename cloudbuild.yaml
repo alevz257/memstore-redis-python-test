@@ -1,0 +1,9 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'asia-southeast2-docker.pkg.dev/alevz-demo-1/containers/${_IMAGE}:latest', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'asia-southeast2-docker.pkg.dev/alevz-demo-1/containers/${_IMAGE}:latest']
+images:
+- asia-southeast2-docker.pkg.dev/alevz-demo-1/containers/${_IMAGE}:latest

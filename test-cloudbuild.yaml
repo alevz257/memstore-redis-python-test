@@ -1,0 +1,9 @@
+steps:
+- name: "gcr.io/cloud-builders/kubectl"
+  args: ['get', 'nodes']
+  env:
+  - 'CLOUDSDK_COMPUTE_REGION=asia-southeast2'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-std-shared-vpc'
+options:
+  workerPool:
+    'projects/alevz-host-project/locations/asia-southeast2/workerPools/worker-private-1'

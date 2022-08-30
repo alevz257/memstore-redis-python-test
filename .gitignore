@@ -1,0 +1,6 @@
+requirements.txt.bckp.1
+test/
+__pycache__/
+*sh
+*pem
+deploy-svc1*
