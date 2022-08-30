@@ -4,3 +4,4 @@ __pycache__/
 *sh
 *pem
 deploy-svc1*
+test-cloudbuild.yaml
