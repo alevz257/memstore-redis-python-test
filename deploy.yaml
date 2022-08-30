@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: test
-        image: asia-southeast2-docker.pkg.dev/alevz-demo-1/containers/redis2:latest
+        image: <image location>
         resources:
           requests:
             memory: "512Mi"
@@ -67,9 +67,9 @@ metadata:
 data:
   OTEL_TRACES_SAMPLER: 'always_on'
   PORT: '8080'
-  WRITEIP: '10.221.0.20'
-  READIP: '10.221.0.21'
-  AUTHSTR: 'projects/966837857153/secrets/redis-pass/versions/3'
+  WRITEIP: <primary ip>
+  READIP: <read ip>
+  AUTHSTR: <secret manager path>
 ---
 apiVersion: v1
 kind: Service
