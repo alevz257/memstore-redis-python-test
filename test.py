@@ -36,10 +36,10 @@ from google.cloud import secretmanager
 
 client = secretmanager.SecretManagerServiceClient()
 #name = f"projects/966837857153/secrets/redis-pass/versions/2"
-name = os.environ.get("AUTHSTR", "projects/966837857153/secrets/redis-pass/versions/2")
+name = os.environ.get("AUTHSTR", "<default value>")
 
-readipvar = os.environ.get("READIP", '10.221.0.4' )
-writeipvar = os.environ.get("WRITEIP", '10.221.0.5' )
+readipvar = os.environ.get("READIP", '<default value>' )
+writeipvar = os.environ.get("WRITEIP", '<default value>' )
 passwordsec = client.access_secret_version(name=name)
 passwordvar = passwordsec.payload.data.decode("UTF-8")
 print(passwordvar)
